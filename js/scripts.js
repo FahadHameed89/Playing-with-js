@@ -111,17 +111,17 @@ console.log( "We are now looping a while loop...\n~~~~~~~~~~~~~~~~~~~~~~~~");
 let myWhileIterator = 5;
 while ( myWhileIterator >= 0 )    // Repeats the code block so long as the condition evaluates to (boolean)true.
 {
-    console.log(`While iterator: ${myWhileIterator}`);     
+    console.log(`Battle Begins in... ${myWhileIterator}`);     
     myWhileIterator--;                                      // Shorthand for decrement value
     hDex++, curHP--, hStr++;
 }
 
 console.log( "We are now looping a FOR...OF loop...\n~~~~~~~~~~~~~~~~~~~~~~~~");
 
-const myForArray = ["Goblin Cave", "Orc Den", "Golem Canyon", "Dragon Island"];
+const myForArray = ["Goblin Gang", "Orc Berserker", "Iron Golem", "Silvan Dragon"];
 for ( const arrayItem of myForArray)    // For.Of will iterate on it's own through the array - we don't need to set a termination condition it will just cycle through the array!
 {
-    console.log( ` You travel through the dangerous dungeon known as ${arrayItem}`); 
+    console.log( ` You come across a... ${arrayItem}...!`); 
 }
 
 console.log( "We are now looping a FOR loop...\n~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -216,7 +216,7 @@ const myDivisionFunction = ( num1, num2 ) => num1 / num2;   // 6a example
     name: "Fahad",
     age: 30,
     hobbies: ["Reading", "Writing", "Gaming", "Coding", "Lifting"]
-    
+
   }
 
   console.log( myObject);
