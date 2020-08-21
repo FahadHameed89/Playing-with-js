@@ -197,3 +197,27 @@ const myDivisionFunction = ( num1, num2 ) => num1 / num2;   // 6a example
  }
 
  console.log ( myMultiplicationFunction(10, 3));
+
+
+ /**
+  *     JavaScript Ojbects
+  */
+ const myPersonInfoArray = [
+     "Fahad",
+     30,
+     ["Reading", "Writing", "Gaming", "Coding", "Lifting"]
+ ];
+
+ console.log( "Person as an array:" );
+ console.log( myPersonInfoArray );
+ console.log( `Name is: ${myPersonInfoArray[0]}` );
+
+  const myObject = {
+    name: "Fahad",
+    age: 30,
+    hobbies: ["Reading", "Writing", "Gaming", "Coding", "Lifting"]
+    
+  }
+
+  console.log( myObject);
+  console.log( `Name is: ${myObject.name}. Age is ${myObject.age}, Hobbies are ${myObject.hobbies}` );
