@@ -34,7 +34,7 @@ const myString5 = "Cloak of Shadows";
 const myString6 = "Heroic Strength Potion";
 let myInteger = 34;   // Ints and Floats are technically the same data-type in JS.
 let maxHP = 34;   // Ints and Floats are technically the same data-type in JS.
-let curHP = 24;   // Ints and Floats are technically the same data-type in JS.
+let curHP = 34;   // Ints and Floats are technically the same data-type in JS.
 let hStr = 3;   // Ints and Floats are technically the same data-type in JS.
 let hDex = 0;   // Ints and Floats are technically the same data-type in JS.
 let hInt = 1;   // Ints and Floats are technically the same data-type in JS.
@@ -113,24 +113,32 @@ while ( myWhileIterator >= 0 )    // Repeats the code block so long as the condi
 {
     console.log(`While iterator: ${myWhileIterator}`);     
     myWhileIterator--;                                      // Shorthand for decrement value
-    hDex++;
+    hDex++, curHP--, hStr++;
 }
 
 console.log( "We are now looping a FOR...OF loop...\n~~~~~~~~~~~~~~~~~~~~~~~~");
 
-const myForArray = ["Walmart", "BestBuy", "Superstore", "Safeway"];
+const myForArray = ["Goblin Cave", "Orc Den", "Golem Canyon", "Dragon Island"];
 for ( const arrayItem of myForArray)    // For.Of will iterate on it's own through the array - we don't need to set a termination condition it will just cycle through the array!
 {
-    console.log( `This array item in our loop contains: ${arrayItem}`); 
+    console.log( ` You travel through the dangerous dungeon known as ${arrayItem}`); 
 }
 
+console.log( "We are now looping a FOR loop...\n~~~~~~~~~~~~~~~~~~~~~~~~");
+for (let myForIterator = 15; myForIterator < 99; myForIterator += 10)
+{
+    console.log (`You have defeated a creature, your EXP is now... ${myForIterator}`)
+}
+// let myNum = 5;
+// myNum++; // This means myNum + 1
+// myNum += 1; // This is the same as the above line, just written slightly differently. 
 
 
 console.log(`
-This is great for formatting outputs. I can add as many lines as I want through the clever use of backticks in the console log!
+You have travelled through the various dungeons and have become stronger! You have spent some of your HP doing battle...
 
 
-Greetings User...I am ${myName}!
+Greetings User...I am still known as ${myName}! Your statistics are below:
 HP: [${curHP} / ${maxHP}]
 STR: [${hStr}] - Increases damage of attacks 
 DEX: [${hDex}] - Increases block gained from skills
@@ -146,3 +154,14 @@ A list of your inventory items:
 [${myArray[5]}] x 1 
 `);
 
+/*
+    FUNCTIONS IN JAVASCRIPT
+*/
+
+function myAdditionFunction ( num1 = 0, num2 = 0 ) {
+    return Number( num1 ) + Number( num2 );                 // Note that return ends the function, so you cannot add code to the end of a function
+}
+const add2And4 = myAdditionFunction( 2, 4);
+console.log (add2And4);
+
+console.log ( myAdditionFunction(-15, 35.5));
