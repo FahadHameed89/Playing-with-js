@@ -165,3 +165,35 @@ const add2And4 = myAdditionFunction( 2, 4);
 console.log (add2And4);
 
 console.log ( myAdditionFunction(-15, 35.5));
+
+function mySubtractionFunction ( num1, num2) {
+    const difference = num1 - num2; // Note that the '-' command can only be used for subration, so JS will assume the two variables are numbers and try to return a number
+    return difference;
+}
+
+console.log( mySubtractionFunction(10, 5));
+
+// Fat-Arrow function syntax as an alternative =>   Used to make a function act as a variable
+// Store the function as if it were a variable
+/*
+    1. const / let for our declaration
+    2. The name of the function
+    3. The assignment operator (=)
+    4. Paranthesis () with parameters inside
+    5. The fat arrow marking the beginning of the function logic
+    6. Two options at this point
+        a. What follows the fat arrow will be returned from the function
+        b. We can use curly braces to maanage larger instruction sets, which give us more control over when and how we return from the function
+    NOTE - When we set up a function using an assignment, it is not 'hoisted', meaning it cannot be called upon before its declaration. Traditional functions are 'hoisted' and can be called at any point. 
+            Using an '=' to define a function, trying to call on it before it has been declared will result in an error. 
+*/
+const myDivisionFunction = ( num1, num2 ) => num1 / num2;   // 6a example
+ //       Name goes here | Function goes here
+ console.log( "Dividing 10 by 5 results in: " + myDivisionFunction(10, 5));
+
+ const myMultiplicationFunction = ( num1, num2 ) => {       // 6b example
+    const product =  num1 * num2;
+    return product;
+ }
+
+ console.log ( myMultiplicationFunction(10, 3));
