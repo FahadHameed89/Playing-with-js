@@ -69,3 +69,8 @@ hoverButton.addEventListener( 'mouseleave', () => {
     console.log( 'The mouse has left the button!' );
     firstSpan.classList.remove( 'salmon-coloured-text');
   } );
+
+clickButton.addEventListener( 'click', () => {
+    console.log( 'Mouse Click detected!' );
+    secondSpan.classList.add('salmon-coloured-text');
+} );
