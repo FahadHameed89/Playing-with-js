@@ -70,7 +70,15 @@ hoverButton.addEventListener( 'mouseleave', () => {
     firstSpan.classList.remove( 'salmon-coloured-text');
   } );
 
+// Let's listen for a click on this button element...
 clickButton.addEventListener( 'click', () => {
-    console.log( 'Mouse Click detected!' );
-    secondSpan.classList.add('salmon-coloured-text');
-} );
+    console.log( 'The "click" button was clicked.' );
+    if ( secondSpan.classList.contains( 'salmon-coloured-text' ) )
+    { // If the class is already there... remove it!
+      secondSpan.classList.remove( 'salmon-coloured-text' );
+    }
+    else
+    { // If the class is NOT already there... add it!
+      secondSpan.classList.add( 'salmon-coloured-text' );
+    }
+  } );
