@@ -22,4 +22,16 @@ helloForm.addEventListener ('submit', ( event )=> {
     event.preventDefault(); // This stops a form from a default submission
     console.log (event); // This logs whatever is under Event
     console.log (event.target); // This logs the element that the event occured on.
+
+// How to get our ''value from our form field?
+const name = nameField.value;
+console.log( name) ;
+
+// How do i make a new Lsit element?
+
+// How do  Iinsert a value/text into the List element?
+
+
 } );
+
+
