@@ -3,6 +3,7 @@
 
 // You can use the # in an href call to travel to a specific subheading in a page. 
 
+
 /*
     Targetting via the DOM (Document Object Model) in JavaScript!
 */
@@ -28,13 +29,25 @@ const hoverButton = document.querySelector( 'p > button' );
 
 console.log(hoverButton);
 
-const firstSpan = document.querySelector( 'p > span:nth-of-child(2)' )
-console.log(firstSpan);
+//const firstSpan = document.querySelector( 'p > span:nth-of-child(2)' )
+// console.log(firstSpan);
 
-const clickButton = document.querySelector( 'p > button:nth-of-type(2)' );
+const clickButton = document.querySelector( 'p > button:nth-of-type(1)' );
 console.log(clickButton);
 // This will select the 2nd type of button that is within the first paragraph
 
-const secondSpan = document.querySelector( 'p > span:nth-of-child(4)' )
-console.log(secondSpan);
+// const secondSpan = document.querySelector( 'p > span:nth-of-child(4)' )
+// console.log(secondSpan);
 // This will grab the 4th child descendant of the first p element, in this case, the second span of text. 
+
+/**
+ *      DOM Element Manipulation
+ * 
+ */
+
+// We can use JS to update / replace content!
+ myH2.textContent = "DOM Target and Element Adjustment Practice!";
+
+ console.log( 'Outputted striing into our <h2> element!');
+
+ myH2.className = 'salmon-coloured-text';
