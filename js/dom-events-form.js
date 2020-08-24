@@ -38,8 +38,9 @@ console.log( newLI.textContent ); // Test
 console.log( newLI);
 
 // How do I add the LI element to the page (or rather, to our list???)
-
-
+helloList.appendChild( newLI );     // This will insert a CHILD into the HELLOLIST element, thild will be newLI, whatever we specified there...
+// you can appendChild to lots of different places, moving the variable as you wish.
+// insert li inside ul
 
 } );
 
