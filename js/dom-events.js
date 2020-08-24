@@ -51,3 +51,24 @@ console.log(clickButton);
  console.log( 'Outputted striing into our <h2> element!');
 
  myH2.className = 'salmon-coloured-text';
+
+
+ /**
+  *     EVENT LISTENERS
+  *     We can add 'listeners' to elements, which listen for user actions.
+  *     If a user action is detected, we can have our JS follow a set of instructions!
+  */
+
+  // This is how we add an event listener to a specific variable...
+/**
+ * There are two arguments for addEventListener:
+ * 1. Type of Event (by name)
+ * 2. The instructions (what should run when the event occurs!)
+ * 
+ *  (This means: a function!)
+ */
+
+  hoverButton.addEventListener( 'mouseenter', () => {
+      console.log( 'The Mouse has entered the button!' );
+  } );
+  
