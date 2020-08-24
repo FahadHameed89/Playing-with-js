@@ -23,13 +23,22 @@ helloForm.addEventListener ('submit', ( event )=> {
     console.log (event); // This logs whatever is under Event
     console.log (event.target); // This logs the element that the event occured on.
 
-// How to get our ''value from our form field?
+// How to get our 'value' from our form field?
 const name = nameField.value;
 console.log( name) ;
 
-// How do i make a new Lsit element?
+// How do i make a new List element?
+const newLI = document.createElement( 'LI' ); // We want to create a <li> element
+console.log( newLI ); // Notice, it's not actually on the page yet, but it exists since we can see it on the console log...
+// We must now give instructions on where and how to add it to the page.
 
-// How do  Iinsert a value/text into the List element?
+// How do insert a value/text into the List element?
+newLI.textContent = `Hello, ${name}!`;      // Adds content to the list element...
+console.log( newLI.textContent ); // Test
+console.log( newLI);
+
+// How do I add the LI element to the page (or rather, to our list???)
+
 
 
 } );
