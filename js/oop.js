@@ -53,7 +53,16 @@ const myObj = {
             document.body.appendChild( helloP);
         }
 
-
+        birthday ()     // Goal here is to increase age by 1
+        {
+            this.age += 1;     // Increases age by 1.
+            const bDayH2 = document.createElement( 'H2' );
+            bDayH2.textContent = "Happy birthday!";
+            document.body.appendChild( bDayH2);
+            const bDayP = document.createElement( 'P' );
+            bDayP.textContent = `${this.name} is now ${this.age} years old!`;
+            document.body.appendChild( bDayP); 
+        }
    }
 
 
@@ -70,6 +79,9 @@ const myObj = {
         // Runs the say hello method for Jane
         jane.sayHello();
 
+        console.log( jane.age );
+        jane.birthday();
+        console.log (jane.age);
     const ali = new Person (
         "Ali",
         22,
@@ -82,6 +94,8 @@ const myObj = {
 
         // Runsthe say hello method for Ali
         ali.sayHello();
+        ali.birthday();
+
     /**
      *  Creating Methods
      */
