@@ -44,7 +44,18 @@ const myObj = {
             this.age = age;
             this.hobbies = hobbies;
        }
+
+// When you make a method within a class, that method is located within the Class and can be used in the future
+        sayHello ()
+        {
+            const helloP = document.createElement( "P" )
+            helloP.textContent = `Hello there, I am ${this.name}, nice to meet you!`;
+            document.body.appendChild( helloP);
+        }
+
+
    }
+
 
                                         // This is how we can define a new Person known as Jane, variable name 'jane', age 34, hobbies are "hunting" and "fishing"
    const jane = new Person ( 
@@ -56,6 +67,8 @@ const myObj = {
        console.log (jane);              // This object looks much smaller but is significantly more condensed, hard to mispell and create syntax errors.
         console.log (jane instanceof Person);   // Just checks if the variable jane is a person
 
+        // Runs the say hello method for Jane
+        jane.sayHello();
 
     const ali = new Person (
         "Ali",
@@ -66,3 +79,10 @@ const myObj = {
     console.log (ali);
     console.log (ali instanceof Person);
     console.log(`My name is ${ali.name}. I am ${ali.age} years old and I refuse to tell you more about myself!`)
+
+        // Runsthe say hello method for Ali
+        ali.sayHello();
+    /**
+     *  Creating Methods
+     */
+
