@@ -63,6 +63,28 @@ const myObj = {
             bDayP.textContent = `${this.name} is now ${this.age} years old!`;
             document.body.appendChild( bDayP); 
         }
+
+        outputHobbies ()    // Goal here is to output hobbies into a list element on the page!
+        {
+        const hobbiesP = document.createElement( 'P' );
+        hobbiesP.textContent = `${this.name}'s hobbies include:`;
+        document.body.appendChild( hobbiesP );
+        // List of Hobbies
+        const hobbiesUL = document.createElement( 'UL' );
+            // Loop through our hobbies -- Use a FOR-OF Loop to cycle through an Array -> For INs are used for index cycling
+        for (const hobby of this.hobbies)
+        {
+            // Create a LI to enter into the UL
+            const hobbyLI = document.createElement( 'LI' );
+            // Add the hobby text (array item value) to our LI
+            hobbyLI.textContent = hobby;
+            // Add the LI to the UL
+            hobbiesUL.appendChild( hobbyLI );
+            
+        }
+            // Append the LI to the document body somewhere
+            document.body.appendChild( hobbiesUL) ;
+        } 
    }
 
 
@@ -82,6 +104,9 @@ const myObj = {
         console.log( jane.age );
         jane.birthday();
         console.log (jane.age);
+
+        jane.outputHobbies();
+
     const ali = new Person (
         "Ali",
         22,
@@ -95,6 +120,7 @@ const myObj = {
         // Runsthe say hello method for Ali
         ali.sayHello();
         ali.birthday();
+        ali.outputHobbies();
 
     /**
      *  Creating Methods
