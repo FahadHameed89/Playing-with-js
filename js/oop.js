@@ -14,3 +14,5 @@
 // In order to access properties within an object, use the . modifier, to get the name!
  console.log(`My name is ${myObj.name}. I am ${myObj.age}, and I am a ${myObj.class}`);
 
+// JSONs (JavaScript Object Notation)
+
