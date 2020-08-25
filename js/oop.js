@@ -55,3 +55,14 @@ const myObj = {
 
        console.log (jane);              // This object looks much smaller but is significantly more condensed, hard to mispell and create syntax errors.
         console.log (jane instanceof Person);   // Just checks if the variable jane is a person
+
+
+    const ali = new Person (
+        "Ali",
+        22,
+        ["Gaming", "Hockey"]
+    );
+    
+    console.log (ali);
+    console.log (ali instanceof Person);
+    console.log(`My name is ${ali.name}. I am ${ali.age} years old and I refuse to tell you more about myself!`)
