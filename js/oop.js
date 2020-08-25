@@ -78,6 +78,7 @@ const myObj = {
             const hobbyLI = document.createElement( 'LI' );
             // Add the hobby text (array item value) to our LI
             hobbyLI.textContent = hobby;
+            hobbyLI.classList.add( "hobby-list-item" );
             // Add the LI to the UL
             hobbiesUL.appendChild( hobbyLI );  
         }
