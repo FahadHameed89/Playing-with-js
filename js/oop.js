@@ -79,12 +79,20 @@ const myObj = {
             // Add the hobby text (array item value) to our LI
             hobbyLI.textContent = hobby;
             // Add the LI to the UL
-            hobbiesUL.appendChild( hobbyLI );
-            
+            hobbiesUL.appendChild( hobbyLI );  
         }
             // Append the LI to the document body somewhere
             document.body.appendChild( hobbiesUL) ;
         } 
+            // Adding a hobby to the hobbies property (array.)
+        addHobby (hobby = "" )
+        {
+            if ( hobby.length > 0 )     // So we can only add items that are not empty.
+            {
+                this.hobbies.push( hobby );    // Built-in method push(); -< moves item to the end of an array!
+            }
+        }
+
    }
 
 
@@ -105,6 +113,8 @@ const myObj = {
         jane.birthday();
         console.log (jane.age);
 
+        jane.addHobby ( "Biking" );
+        jane.addHobby ( "Checkers" );
         jane.outputHobbies();
 
     const ali = new Person (
