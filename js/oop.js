@@ -1,18 +1,57 @@
-// alert("oop.js has been loaded!")
+// alert( "OOP.js loaded!" ); // The file is loaded if we see the alert!
 
-/**
- *  Objects are marked by curly braces
- */
+// Basic JS object.
+const myObj = {
+    name: "Joe",
+    age: 35,
+    hobbies: [ "Movies", "Pottery" ]
+  };
+  
+  // Access properties or methods with "."
+  console.log( `My name is ${myObj.name}. I am ${myObj.age} years old!. My Hobbies are watching ${myObj.hobbies[0]} and doing ${myObj.hobbies[1]}` );
+  
+  console.log( myObj );
+  
+  // We can convert an existing object into a JSON string.
+  // Make sure the object doesn't have methods or incompatible data/features for the JSON format.
+  const myObjString = JSON.stringify( myObj );
+  console.log( myObjString );
+  
+  // JSON (JavaScript Object Notation)
+  // Properties MUST be wrapped in double quotes to be considered valid JSON.
+  // We CANNOT have methods in a JSON string/object.
+  const secondPersonString = `{
+    "name": "Sarah",
+    "age": 29,
+    "hobbies": [ "Deep Sea Fishing", "Cycling" ]
+  }`;
+  console.log( secondPersonString );
+  
+  // Convert a string into a regular JS object we can use.
+  const secondPersonObj = JSON.parse( secondPersonString );
+  // If the string was properly formatted JSON, it should now be usable!
+  console.log( secondPersonObj );
 
- const myObj = {
-     name: "Fahad",
-     age: 30,
-     class: "Knight",
-     Traits: [ "Heroic Strength", "Sword Mastery" ]
- };
 
-// In order to access properties within an object, use the . modifier, to get the name!
- console.log(`My name is ${myObj.name}. I am ${myObj.age}, and I am a ${myObj.class}`);
+  /**
+   *    Classes (Blueprints for a 'Type' of Objects)
+   */
 
-// JSONs (JavaScript Object Notation)
+   class Person {
+       constructor ( name = "", age = 0, hobbies = [] )       // Built in method for creating new objects - When a new object is being created following this blueprint/class.
+       {                                                        // Creating a new template that has defaults for name, age and hobby...!
+            this.name = name;
+            this.age = age;
+            this.hobbies = hobbies;
+       }
+   }
 
+                                        // This is how we can define a new Person known as Jane, variable name 'jane', age 34, hobbies are "hunting" and "fishing"
+   const jane = new Person ( 
+       "Jane", 
+       34,
+       ["Hunting", "Sewing"]
+       );
+
+       console.log (jane);              // This object looks much smaller but is significantly more condensed, hard to mispell and create syntax errors.
+        console.log (jane instanceof Person);   // Just checks if the variable jane is a person
