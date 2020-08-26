@@ -20,6 +20,20 @@ fetch( 'http://api.open-notify.org/astros.json' )    // The first argument you e
     // Our function returns a JS object(converted from the JSON string that the API provides)
     // So in this case, the fetch CALLS a 'response' from the website which is a JSON, and we are parsing the JSON into an object. 
     .then( response => response.json() )
-    // Now we must check if the object exists via console log...!
-    .then( data => { console.log (data); } );
+    // Now we want to check the data within the object
+    .then( data => { 
+        console.log (data);             // Checks to see if we collected the entire data object (we did)
+        const people = data.people;     // This is the array with the people in it, say we wanted to look one step deeper. 
+        console.log(people );           // We expect this to be an array with people inside...It is!
+
+        const peopleUL = document.createElement( 'UL' );    // Now we create a new unordered list object, which will probably use for displaying the info on the web page.
+        // Let's loop through the people and add each one to the list
+        for ( const person of people )      // Create a new constant for each element of PEOPLE, which is the data array we created before ((not the object, just the aray))
+        {    
+            const personLI = document.createElement( 'LI' );
+            personLI.textContent = `on the ${person.craft} craft, astronaut "${person.name}" is present!`;
+            peopleUL.appendChild( personLI );
+        }   // Don't forget to add the information to the document !
+        document.body.appendChild( peopleUL );
+    } );
     // If we check console log we can now see the information for whichever humans are in space and on which craft!
