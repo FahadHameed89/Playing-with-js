@@ -46,4 +46,19 @@ fetch( 'http://api.open-notify.org/astros.json' )    // The first argument you e
      *  Let's try another example - this time we will grab live data on a timer!
      */
 
-     
+     // First declare variables based on the HTML tags
+     const latDD = document.getElementById( 'lat' );
+     const longDD = document.getElementById( 'long' );
+     console.log(latDD);
+     console.log(longDD);           // Just to confirm we are actually targetting the right locations
+
+     // Add a function that grabs data from our API and updates the elements.
+    const updateLatLong = () => {
+        // First - Grab the data
+        fetch ( 'http://api.open-notify.org/iss-now.json' )
+
+        
+    }
+
+
+     // Add a repeating timer so that this function can repeat.
