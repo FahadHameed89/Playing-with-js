@@ -56,9 +56,21 @@ fetch( 'http://api.open-notify.org/astros.json' )    // The first argument you e
     const updateLatLong = () => {
         // First - Grab the data
         fetch ( 'http://api.open-notify.org/iss-now.json' )
-
-        
+            .then (response => response.json())
+        //  .then (response => {return response.json(); } )  // Is the same thing as the above line, different syntax 
+            .then( data => {
+                console.log(data);
+                // Grab our latitude and longitude from the data object. iss_position
+                const lat = data.iss_position.latitude;
+                const long = data.iss_position.longitude;
+                // Update the elements in the DOM
+                latDD.textContent = lat;
+                longDD.textContent = long;
+            })
+            // Outputs if there is an error
+            .catch( error => { console.log( error );});
     }
 
-
+    updateLatLong();    // This should run!, it runs only once!
+    
      // Add a repeating timer so that this function can repeat.
