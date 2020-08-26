@@ -35,5 +35,9 @@ fetch( 'http://api.open-notify.org/astros.json' )    // The first argument you e
             peopleUL.appendChild( personLI );
         }   // Don't forget to add the information to the document !
         document.body.appendChild( peopleUL );
-    } );
+    } )
+    .catch( error => {                     // Wwe can do a catch in case of some craziness happens in the future
+        console.log( error );           // This will tell you what the error happens to be
+
+    });
     // If we check console log we can now see the information for whichever humans are in space and on which craft!
