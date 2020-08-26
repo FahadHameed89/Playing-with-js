@@ -41,3 +41,9 @@ fetch( 'http://api.open-notify.org/astros.json' )    // The first argument you e
 
     });
     // If we check console log we can now see the information for whichever humans are in space and on which craft!
+
+    /**
+     *  Let's try another example - this time we will grab live data on a timer!
+     */
+
+     
