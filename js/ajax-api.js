@@ -72,5 +72,8 @@ fetch( 'http://api.open-notify.org/astros.json' )    // The first argument you e
     }
 
     updateLatLong();    // This should run!, it runs only once!
-    
+
      // Add a repeating timer so that this function can repeat.
+
+     setInterval( updateLatLong, 500 );     // Function built into JS that repeats something based on time passes. It takes 2 arguments, 1st is a function and 2nd is a time delay. 
+    // We are saying, repeat the updateLatLong function every 500ms
