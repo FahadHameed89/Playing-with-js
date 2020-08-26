@@ -12,5 +12,14 @@
  * 
  * With JS, this is our best option for making external requests and getting data returned.
  * 
- * The modern way to make AJAX requests with JS is to use the built-in 'Fetch' function/feature.
+ * The modern way to make AJAX requests with JS is to use the built-in 'fetch()' function/feature.
  */
+
+fetch( 'http://api.open-notify.org/astros.json' )    // The first argument you enter is a URL -- in this case we got this from http://open-notify.org/Open-Notify-API/
+    // .then means this is attached to the fetch, just broken up for legibility. 
+    // Our function returns a JS object(converted from the JSON string that the API provides)
+    // So in this case, the fetch CALLS a 'response' from the website which is a JSON, and we are parsing the JSON into an object. 
+    .then( response => response.json() )
+    // Now we must check if the object exists via console log...!
+    .then( data => { console.log (data); } );
+    // If we check console log we can now see the information for whichever humans are in space and on which craft!
